@@ -17,15 +17,26 @@
   }
 
   /* ─────────────────────────────────────────
+     CONTAINER
+  ───────────────────────────────────────── */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  /* ─────────────────────────────────────────
      NAV
   ───────────────────────────────────────── */
   .fid-nav {
     background: #4a8c3f;
+    height: 44px;
+  }
+  .fid-nav .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    height: 44px;
+    height: 100%;
   }
   .fid-nav-left { display: flex; align-items: center; gap: 0.75rem; }
   .fid-logo {
@@ -47,9 +58,11 @@
     position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: cover; object-position: right center; display: block;
   }
-  .hero-content {
+  .hero .container {
     position: relative; z-index: 2;
-    padding: 2.5rem 2rem 2.5rem 2rem;
+  }
+  .hero-content {
+    padding: 2.5rem 0;
     max-width: 55%;
   }
   .hero-content h1 {
@@ -69,7 +82,7 @@
      DIGITAL MEETS PERSONAL
   ───────────────────────────────────────── */
   .dmp-section {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0;
     border-bottom: 1px solid #e0e0e0;
   }
   .dmp-title {
@@ -98,11 +111,15 @@
   /* ─────────────────────────────────────────
      ROBO + COACHING BAND
   ───────────────────────────────────────── */
+  .robo-outer {
+    background: #5a3e2b;
+  }
   .robo-band {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 280px;
-    background: #5a3e2b;
+    max-width: 1140px;
+    margin: 0 auto;
   }
   .robo-image {
     background: #4a3020;
@@ -153,7 +170,7 @@
      FEE CALCULATOR
   ───────────────────────────────────────── */
   .fee-outer {
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 0;
     border-bottom: 1px solid #e0e0e0;
   }
   .fee-inner {
@@ -195,14 +212,14 @@
   .fee-result-amount {
     font-size: 2.2rem; font-weight: 300; color: #333; line-height: 1;
   }
-  .fee-result-amount span { font-size: 1rem; vertical-align: super; font-size: 1rem; }
+  .fee-result-amount span { font-size: 1rem; vertical-align: super; }
   .fee-result-note { font-size: 0.72rem; color: #888; line-height: 1.4; max-width: 220px; }
 
   /* ─────────────────────────────────────────
      PROCESS STEPS — What to expect
   ───────────────────────────────────────── */
   .process-section {
-    padding: 3rem 2rem;
+    padding: 3rem 0;
     background: #f5f5f5;
     border-bottom: 1px solid #e0e0e0;
   }
@@ -247,45 +264,30 @@
   /* ─────────────────────────────────────────
      GET STARTED CTA
   ───────────────────────────────────────── */
-  .cta-section {
-    padding: 2.5rem 2rem;
+  .cta-outer {
+    padding: 2.5rem 0;
+    background: #fff;
     border-bottom: 1px solid #e0e0e0;
-    max-width: 860px;
-    margin: 0 auto;
   }
-  .cta-section h2 {
-    font-size: 1.1rem; font-weight: 400; color: #222; margin-bottom: 1.25rem;
-  }
-  .cta-row { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
   .cta-btn {
     background: #2e6da4; color: #fff; font-size: 0.85rem;
     padding: 0.55rem 1.25rem; border: none; cursor: pointer; border-radius: 3.75px;
   }
-  .cta-row-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
-  .cta-row-item .q-icon {
-    width: 32px; height: 32px; border: 2px solid #ccc; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.7rem; font-weight: 700; color: #888; flex-shrink: 0;
-  }
-  .cta-row-item .q-text { display: flex; flex-direction: column; }
-  .cta-row-item .q-text strong { font-size: 0.82rem; color: #333; }
-  .cta-row-item .q-text span { font-size: 0.78rem; color: #555; }
-  .cta-row-item .q-text a { color: #2e6da4; text-decoration: none; font-size: 0.82rem; }
-  .cta-tagline { font-size: 0.72rem; color: #888; margin-top: 0.5rem; }
 
   /* ─────────────────────────────────────────
      LEGAL FOOTER
   ───────────────────────────────────────── */
   .legal-footer {
-    background: #fff; border-top: 1px solid #e0e0e0; padding: 1.25rem 2rem;
+    background: #fff; border-top: 1px solid #e0e0e0; padding: 1.25rem 0;
   }
   .legal-footer p {
     font-size: 0.63rem; color: #777; line-height: 1.55; margin-bottom: 0.4rem;
   }
   .fid-footer {
-    background: #fff; border-top: 1px solid #e8e8e8;
-    padding: 0.75rem 2rem; display: flex;
-    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    background: #fff; border-top: 1px solid #e8e8e8; padding: 0.75rem 0;
+  }
+  .fid-footer .container {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
   }
   .fid-footer-links { font-size: 0.63rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
   .fid-footer-links a { color: #2e6da4; text-decoration: none; }
@@ -294,7 +296,8 @@
      RESPONSIVE
   ───────────────────────────────────────── */
   @media (max-width: 640px) {
-    .hero-content { max-width: 100%; padding: 1.5rem 1.25rem 7rem; }
+    .container { padding: 0 1.25rem; }
+    .hero-content { max-width: 100%; padding: 1.5rem 0 7rem; }
     .dmp-grid { grid-template-columns: 1fr; }
     .dmp-right { border-left: none; border-top: 1px solid #e0e0e0; padding-left: 0; padding-top: 1.25rem; }
     .dmp-coaching-icon { width: 70px; }
@@ -306,8 +309,6 @@
     .process-steps { grid-template-columns: 1fr; gap: 2rem; }
     .process-connector { display: none; }
     .process-step-label { min-height: unset; }
-    .cta-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .dmp-section, .fee-outer, .cta-section { padding-left: 1.25rem; padding-right: 1.25rem; }
   }
 </style>
 </head>
@@ -315,103 +316,113 @@
 
 <!-- NAV -->
 <div class="fid-nav">
-  <div class="fid-nav-left">
-    <div class="fid-logo">AdvisorCo</div>
-    <span class="fid-nav-title">Personalized Planning &amp; Advice</span>
+  <div class="container">
+    <div class="fid-nav-left">
+      <div class="fid-logo">AdvisorCo</div>
+      <span class="fid-nav-title">Personalized Planning &amp; Advice</span>
+    </div>
   </div>
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <img class="hero-img" src="HouseOnLakeHero.png" alt="">
-  <div class="hero-content">
-    <h1>Those big dreams of yours?<br>Let's go reach them, together.</h1>
-    <p>You want affordable investment management for your goals.<br>Our hybrid robo advisor is here to help.</p>
-    <button class="hero-cta">Tell us about yourself</button>
+  <div class="container">
+    <div class="hero-content">
+      <h1>Those big dreams of yours?<br>Let's go reach them, together.</h1>
+      <p>You want affordable investment management for your goals.<br>Our hybrid robo advisor is here to help.</p>
+      <button class="hero-cta">Tell us about yourself</button>
+    </div>
   </div>
 </div>
 
 <!-- DIGITAL MEETS PERSONAL -->
 <div class="dmp-section">
-  <p class="dmp-title">Digital meets personal</p>
-  <div class="dmp-grid">
-    <div class="dmp-left">
-      <div class="dmp-item">
-        <span class="dmp-check">✓</span>
-        <span>Want something personalized? Tell us about you and your goals, and we'll digitally recommend a tailored investment strategy.</span>
-      </div>
-      <div class="dmp-item">
-        <span class="dmp-check">✓</span>
-        <span>Looking for a partnership? No problem. We'll choose your investments and use technology to make sure you stay on track.</span>
-      </div>
-      <div class="dmp-item">
-        <span class="dmp-check">✓</span>
-        <span>Need something extra? Online planning tools and resources to help you determine your next best action.</span>
-      </div>
-    </div>
-    <div class="dmp-right">
-      <div class="dmp-coaching-row">
-        <span class="dmp-check">✓</span>
-        <div class="dmp-coaching-content">
-          Need coaching? Our team of advisors will work with you to develop strategies to help you tackle your financial life with confidence. <a href="prospect.html">More about coaching</a>
+  <div class="container">
+    <p class="dmp-title">Digital meets personal</p>
+    <div class="dmp-grid">
+      <div class="dmp-left">
+        <div class="dmp-item">
+          <span class="dmp-check">✓</span>
+          <span>Want something personalized? Tell us about you and your goals, and we'll digitally recommend a tailored investment strategy.</span>
         </div>
-        <img class="dmp-coaching-icon" src="MapIcon.svg" alt="">
+        <div class="dmp-item">
+          <span class="dmp-check">✓</span>
+          <span>Looking for a partnership? No problem. We'll choose your investments and use technology to make sure you stay on track.</span>
+        </div>
+        <div class="dmp-item">
+          <span class="dmp-check">✓</span>
+          <span>Need something extra? Online planning tools and resources to help you determine your next best action.</span>
+        </div>
       </div>
-      <p class="dmp-phone-label">Questions? Ask for "Planning"</p>
-      <p class="dmp-phone">800-343-3548</p>
+      <div class="dmp-right">
+        <div class="dmp-coaching-row">
+          <span class="dmp-check">✓</span>
+          <div class="dmp-coaching-content">
+            Need coaching? Our team of advisors will work with you to develop strategies to help you tackle your financial life with confidence. <a href="coaching_pages.html#prospect">More about coaching</a>
+          </div>
+          <img class="dmp-coaching-icon" src="MapIcon.svg" alt="">
+        </div>
+        <p class="dmp-phone-label">Questions? Ask for "Planning"</p>
+        <p class="dmp-phone">800-343-3548</p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ROBO + COACHING BAND -->
-<div class="robo-band">
-  <div class="robo-image">
-    <div class="robo-tablet-placeholder">
-      <div class="robo-tablet-screen">
-        <div class="robo-screen-bar"></div>
-        <div class="robo-screen-line"></div>
-        <div class="robo-screen-line short"></div>
-        <div class="robo-screen-line"></div>
-        <div class="robo-screen-line short"></div>
-        <div class="robo-screen-chart">
-          <span style="height:30%"></span>
-          <span style="height:50%"></span>
-          <span style="height:40%"></span>
-          <span style="height:70%"></span>
-          <span style="height:55%"></span>
-          <span style="height:80%"></span>
-          <span style="height:65%"></span>
-          <span style="height:90%"></span>
+<div class="robo-outer">
+  <div class="robo-band">
+    <div class="robo-image">
+      <div class="robo-tablet-placeholder">
+        <div class="robo-tablet-screen">
+          <div class="robo-screen-bar"></div>
+          <div class="robo-screen-line"></div>
+          <div class="robo-screen-line short"></div>
+          <div class="robo-screen-line"></div>
+          <div class="robo-screen-line short"></div>
+          <div class="robo-screen-chart">
+            <span style="height:30%"></span>
+            <span style="height:50%"></span>
+            <span style="height:40%"></span>
+            <span style="height:70%"></span>
+            <span style="height:55%"></span>
+            <span style="height:80%"></span>
+            <span style="height:65%"></span>
+            <span style="height:90%"></span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="robo-content">
-    <h2>Robo investing + the benefit of coaching</h2>
-    <p>It's called a "hybrid" robo advisor because we pair robo investing, which is an automated way to invest, with a human element through personal coaching. Based on your needs, we'll generate an investment strategy, sample pictured. We'll invest your money and keep an eye on your account to make sure your portfolio's breakdown stays in line. At no additional cost, you'll get access to 30-minute coaching calls with a licensed advisor who'll collaborate with you on a variety of financial topics to help you reach your goals.</p>
+    <div class="robo-content">
+      <h2>Robo investing + the benefit of coaching</h2>
+      <p>It's called a "hybrid" robo advisor because we pair robo investing, which is an automated way to invest, with a human element through personal coaching. Based on your needs, we'll generate an investment strategy, sample pictured. We'll invest your money and keep an eye on your account to make sure your portfolio's breakdown stays in line. At no additional cost, you'll get access to 30-minute coaching calls with a licensed advisor who'll collaborate with you on a variety of financial topics to help you reach your goals.</p>
+    </div>
   </div>
 </div>
 
 <!-- FEE CALCULATOR -->
 <div class="fee-outer">
-  <div class="fee-inner">
-    <div class="fee-text">
-      <h2>A great value with no hidden fees</h2>
-      <p>We believe that putting your money on a mission shouldn't have to cost a lot. That's why you pay no more than a 0.50% advisory fee.</p>
-    </div>
-    <div class="fee-calc">
-      <div class="fee-input-group">
-        <span class="fee-label">Your account balance</span>
-        <div class="fee-input-row">
-          <span class="fee-dollar">$</span>
-          <input class="fee-input" type="number" id="balanceInput" value="25000" min="25000" step="1000">
-        </div>
-        <span class="fee-min">$25,000 minimum</span>
+  <div class="container">
+    <div class="fee-inner">
+      <div class="fee-text">
+        <h2>A great value with no hidden fees</h2>
+        <p>We believe that putting your money on a mission shouldn't have to cost a lot. That's why you pay no more than a 0.50% advisory fee.</p>
       </div>
-      <div class="fee-result-group">
-        <span class="fee-result-label">Estimated total cost</span>
-        <div class="fee-result-amount" id="feeResult">$10.42<span>/mo</span></div>
-        <p class="fee-result-note">Actual costs will vary based on account balance.</p>
+      <div class="fee-calc">
+        <div class="fee-input-group">
+          <span class="fee-label">Your account balance</span>
+          <div class="fee-input-row">
+            <span class="fee-dollar">$</span>
+            <input class="fee-input" type="number" id="balanceInput" value="25000" min="25000" step="1000">
+          </div>
+          <span class="fee-min">$25,000 minimum</span>
+        </div>
+        <div class="fee-result-group">
+          <span class="fee-result-label">Estimated total cost</span>
+          <div class="fee-result-amount" id="feeResult">$10.42<span>/mo</span></div>
+          <p class="fee-result-note">Actual costs will vary based on account balance.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -419,100 +430,108 @@
 
 <!-- PROCESS STEPS -->
 <div class="process-section">
-  <p class="process-title">What to expect</p>
-  <div class="process-steps">
+  <div class="container">
+    <p class="process-title">What to expect</p>
+    <div class="process-steps">
 
-    <div class="process-step">
-      <span class="process-step-label">Create a profile</span>
-      <div class="process-icon-circle">
-        <img src="icon_create_profile.svg" alt="Create a profile">
+      <div class="process-step">
+        <span class="process-step-label">Create a profile</span>
+        <div class="process-icon-circle">
+          <img src="icon_create_profile.svg" alt="Create a profile">
+        </div>
+        <p class="process-desc">Tell us about yourself and what you're saving for. It'll take about 5 minutes.</p>
       </div>
-      <p class="process-desc">Tell us about yourself and what you're saving for. It'll take about 5 minutes.</p>
-    </div>
 
-    <div class="process-connector"></div>
+      <div class="process-connector"></div>
 
-    <div class="process-step">
-      <span class="process-step-label">Get a free proposal</span>
-      <div class="process-icon-circle">
-        <img src="icon_proposal.svg" alt="Get a free proposal">
+      <div class="process-step">
+        <span class="process-step-label">Get a free proposal</span>
+        <div class="process-icon-circle">
+          <img src="icon_proposal.svg" alt="Get a free proposal">
+        </div>
+        <p class="process-desc">Review your no-commitment investment strategy.</p>
       </div>
-      <p class="process-desc">Review your no-commitment investment strategy.</p>
-    </div>
 
-    <div class="process-connector"></div>
+      <div class="process-connector"></div>
 
-    <div class="process-step">
-      <span class="process-step-label">Accept and open</span>
-      <div class="process-icon-circle">
-        <img src="icon_accept_open.svg" alt="Accept and open">
+      <div class="process-step">
+        <span class="process-step-label">Accept and open</span>
+        <div class="process-icon-circle">
+          <img src="icon_accept_open.svg" alt="Accept and open">
+        </div>
+        <p class="process-desc">Accept our proposal, then open and fund your account. Congrats, you're officially enrolled!</p>
       </div>
-      <p class="process-desc">Accept our proposal, then open and fund your account. Congrats, you're officially enrolled!</p>
-    </div>
 
-    <div class="process-connector"></div>
+      <div class="process-connector"></div>
 
-    <div class="process-step">
-      <span class="process-step-label">Stay on track</span>
-      <div class="process-icon-circle">
-        <img src="icon_stay_on_track.svg" alt="Stay on track">
+      <div class="process-step">
+        <span class="process-step-label">Stay on track</span>
+        <div class="process-icon-circle">
+          <img src="icon_stay_on_track.svg" alt="Stay on track">
+        </div>
+        <p class="process-desc">We'll make the necessary adjustments, when needed, and have an ongoing conversation with you.</p>
       </div>
-      <p class="process-desc">We'll make the necessary adjustments, when needed, and have an ongoing conversation with you.</p>
-    </div>
 
+    </div>
   </div>
 </div>
 
 <!-- GET STARTED CTA -->
-<div style="padding: 2.5rem 2rem; background: #fff; border-bottom: 1px solid #e0e0e0;">
-  <h2 style="font-size:1.1rem; font-weight:400; color:#222; margin-bottom:1.25rem;">Ready to get started?</h2>
-  <div style="display:flex; align-items:center; gap:3rem; flex-wrap:wrap;">
+<div class="cta-outer">
+  <div class="container">
+    <h2 style="font-size:1.1rem; font-weight:400; color:#222; margin-bottom:1.25rem;">Ready to get started?</h2>
+    <div style="display:flex; align-items:center; gap:3rem; flex-wrap:wrap;">
 
-    <!-- Button + tagline -->
-    <div style="display:flex; flex-direction:column; gap:0.4rem;">
-      <button class="cta-btn">Tell us about yourself</button>
-      <span style="font-size:0.72rem; color:#888;">It'll take about 5 minutes.</span>
-    </div>
-
-    <!-- Phone -->
-    <div style="display:flex; align-items:center; gap:0.6rem;">
-      <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="20" height="30" rx="4" stroke="#888" stroke-width="1.5" fill="none"/>
-        <circle cx="11" cy="27" r="2" fill="#888" opacity="0.5"/>
-        <line x1="7" y1="5" x2="15" y2="5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      <div style="display:flex; flex-direction:column; gap:0.1rem;">
-        <span style="font-size:0.78rem; color:#555;">Questions?</span>
-        <span style="font-size:0.95rem; font-weight:700; color:#333;">800-343-3548</span>
-        <span style="font-size:0.78rem; color:#555;">Ask for "Planning"</span>
+      <!-- Button + tagline -->
+      <div style="display:flex; flex-direction:column; gap:0.4rem;">
+        <button class="cta-btn">Tell us about yourself</button>
+        <span style="font-size:0.72rem; color:#888;">It'll take about 5 minutes.</span>
       </div>
-    </div>
 
-    <!-- FAQs -->
-    <div style="display:flex; align-items:center; gap:0.5rem;">
-      <div style="width:28px; height:28px; border:1.5px solid #aaa; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; color:#888;">?</div>
-      <a href="#" style="color:#2e6da4; text-decoration:none; font-size:0.85rem;">FAQs</a>
-    </div>
+      <!-- Phone -->
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="20" height="30" rx="4" stroke="#888" stroke-width="1.5" fill="none"/>
+          <circle cx="11" cy="27" r="2" fill="#888" opacity="0.5"/>
+          <line x1="7" y1="5" x2="15" y2="5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div style="display:flex; flex-direction:column; gap:0.1rem;">
+          <span style="font-size:0.78rem; color:#555;">Questions?</span>
+          <span style="font-size:0.95rem; font-weight:700; color:#333;">800-343-3548</span>
+          <span style="font-size:0.78rem; color:#555;">Ask for "Planning"</span>
+        </div>
+      </div>
 
+      <!-- FAQs -->
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <div style="width:28px; height:28px; border:1.5px solid #aaa; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; color:#888;">?</div>
+        <a href="#" style="color:#2e6da4; text-decoration:none; font-size:0.85rem;">FAQs</a>
+      </div>
+
+    </div>
   </div>
 </div>
 
 <!-- LEGAL -->
 <div class="legal-footer">
-  <p>Before investing, consider the funds' investment objectives, risks, charges, and expenses. Contact our firm for a prospectus or, if available, a summary prospectus containing this information. Read it carefully.</p>
-  <p>The results of any financial planning tools are hypothetical, do not represent actual investment results, and are not guarantees of future results.</p>
-  <p>Advisory services offered by registered investment advisers. Brokerage services provided by registered broker-dealers, members NYSE and SIPC.</p>
-  <p style="margin-top:0.5rem;">© 2019. All rights reserved. &nbsp;|&nbsp; This is for persons in the U.S. only.</p>
+  <div class="container">
+    <p>Before investing, consider the funds' investment objectives, risks, charges, and expenses. Contact our firm for a prospectus or, if available, a summary prospectus containing this information. Read it carefully.</p>
+    <p>The results of any financial planning tools are hypothetical, do not represent actual investment results, and are not guarantees of future results.</p>
+    <p>Advisory services offered by registered investment advisers. Brokerage services provided by registered broker-dealers, members NYSE and SIPC.</p>
+    <p style="margin-top:0.5rem;">© 2019. All rights reserved. &nbsp;|&nbsp; This is for persons in the U.S. only.</p>
+  </div>
 </div>
 <div class="fid-footer">
-  <span style="font-size:0.63rem; color:#888;">© 2019. All rights reserved.</span>
-  <div class="fid-footer-links">
-    <a href="#">Terms of Use</a>
-    <a href="#">Privacy</a>
-    <a href="#">Security</a>
-    <a href="#">Site Map</a>
-    <a href="#">Contact Us</a>
-    <span style="color:#888;">This is for persons in the U.S. only</span>
+  <div class="container">
+    <span style="font-size:0.63rem; color:#888;">© 2019. All rights reserved.</span>
+    <div class="fid-footer-links">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Security</a>
+      <a href="#">Site Map</a>
+      <a href="#">Contact Us</a>
+      <span style="color:#888;">This is for persons in the U.S. only</span>
+    </div>
   </div>
 </div>
 
