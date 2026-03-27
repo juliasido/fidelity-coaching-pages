@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "coaching-pages",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const http=require('http'),fs=require('fs'),path=require('path'),ROOT='/tmp',MIME={'.html':'text/html','.png':'image/png','.jpg':'image/jpeg','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml'};http.createServer((req,res)=>{let f=path.join(ROOT,decodeURIComponent(req.url==='/'?'/coaching_landing_pages.html':req.url));fs.readFile(f,(err,data)=>{if(err){res.writeHead(404);res.end('Not found: '+f);return;}res.writeHead(200,{'Content-Type':MIME[path.extname(f)]||'application/octet-stream'});res.end(data);});}).listen(process.env.PORT||8743,()=>console.log('ready'));"],
+      "port": 8743,
+      "autoPort": true
+    }
+  ]
+}

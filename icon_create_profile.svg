@@ -1,0 +1,18 @@
+<svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="65.5" cy="65.5" r="64.5" fill="white" stroke="#CCCCCC" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M67.4759 56.6875C72.5691 56.6875 76.698 52.5741 76.698 47.5C76.698 42.4259 72.5691 38.3125 67.4759 38.3125C62.3827 38.3125 58.2539 42.4259 58.2539 47.5C58.2539 52.5741 62.3827 56.6875 67.4759 56.6875V56.6875Z" stroke="black" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M81.9679 61.9375H52.9844C52.9844 72.6186 57.3056 78.8477 62.2064 81.625V98.6875H72.7459V81.625C77.6415 78.8477 81.9679 72.6186 81.9679 61.9375V61.9375Z" stroke="black" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M68.7941 61.9375H66.1592L64.8418 77.6875L67.4767 80.3125L70.1115 77.6875L68.7941 61.9375V61.9375Z" stroke="black" stroke-linejoin="round"/>
+<path d="M89.8722 54.0625H93.8245V60.625L100.412 54.0625H112.269V38.3125H85.9199V48.8125" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M103.047 47.5H105.682V44.875H103.047V47.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M97.7773 47.5H100.412V44.875H97.7773V47.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M92.5078 47.5H95.1427V44.875H92.5078V47.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M38.4916 56.6875C43.5848 56.6875 47.7136 52.5741 47.7136 47.5C47.7136 42.4259 43.5848 38.3125 38.4916 38.3125C33.3984 38.3125 29.2695 42.4259 29.2695 47.5C29.2695 52.5741 33.3984 56.6875 38.4916 56.6875V56.6875Z" stroke="black" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M38.4918 60.625C30.487 60.625 24 72.4375 24 85.5625H33.222V98.6875H43.7615V85.5625H52.9836C52.9836 72.4375 46.4939 60.625 38.4918 60.625V60.625Z" stroke="black" stroke-linejoin="round"/>
+<path d="M33.2227 85.5625H43.7621" stroke="black" stroke-linejoin="round"/>
+<path d="M45.0086 63.3984L38.4926 72.4363L31.9766 63.3984" stroke="black" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M44 85L36 99H44V85Z" fill="#0E67A9" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M73 85L65 99H73V85Z" fill="#0E67A9" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M68 62V80L70 77.8438L69.3884 62H68Z" fill="#0E67A9" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42.25 62L36 68.9402L38.3103 72L45 63.8241L42.25 62Z" fill="#0E67A9" fill-opacity="0.3"/>
+</svg>
