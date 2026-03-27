@@ -4,304 +4,535 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<title>FinanceCo Personalized Planning &amp; Advice</title>
+<title>Personalized Planning & Advice — Landing Page</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html, body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background: #e8e8e8;
+    background: #fff;
     color: #333;
     color-scheme: light !important;
   }
 
-  /* PAGE SHELL */
-  .page { max-width: 800px; margin: 2rem auto; background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.14); }
-
-  /* NAV */
+  /* ─────────────────────────────────────────
+     NAV
+  ───────────────────────────────────────── */
   .fid-nav {
-    background: #4a8c3f; display: flex; align-items: center;
-    justify-content: space-between; padding: 0 1.25rem; height: 44px; position: relative; z-index: 10;
+    background: #4a8c3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 44px;
   }
   .fid-nav-left { display: flex; align-items: center; gap: 0.75rem; }
-  .fid-logo { background: #fff; color: #4a8c3f; font-weight: 700; font-size: 1rem; font-style: italic; padding: 0.2rem 0.6rem; border-radius: 2px; font-family: Georgia, serif; }
+  .fid-logo {
+    background: #fff; color: #4a8c3f; font-weight: 700; font-size: 1rem;
+    font-style: italic; padding: 0.2rem 0.6rem; border-radius: 2px; font-family: Georgia, serif;
+  }
   .fid-nav-title { color: #fff; font-size: 0.82rem; opacity: 0.9; }
-  .fid-nav-action { color: #fff; font-size: 0.78rem; opacity: 0.9; white-space: nowrap; }
 
-  /* HERO */
-  .hero { position: relative; min-height: 240px; overflow: hidden; background: #7a9e9f; }
+  /* ─────────────────────────────────────────
+     HERO
+  ───────────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 220px;
+    overflow: hidden;
+    background: #e8f0f8;
+  }
   .hero-img {
     position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center center; display: block;
+    object-fit: cover; object-position: right center; display: block;
   }
-  .hero-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.38) 50%, rgba(0,0,0,0.08) 100%);
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    max-width: 55%;
   }
-  .hero-content { position: relative; z-index: 2; padding: 2.5rem 2rem; max-width: 60%; }
-  .hero-content h1 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 300; color: #fff; line-height: 1.25; margin-bottom: 0.75rem; }
-  .hero-content p { font-size: 0.85rem; color: rgba(255,255,255,0.92); line-height: 1.55; }
-  .hero-cta { display: inline-block; margin-top: 1.25rem; background: #2e6da4; color: #fff; font-size: 0.82rem; padding: 0.6rem 1.4rem; border: none; cursor: pointer; border-radius: 3.75px; text-decoration: none; }
+  .hero-content h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    font-weight: 300; color: #1a1a1a; line-height: 1.2; margin-bottom: 0.75rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem; color: #333; line-height: 1.6; margin-bottom: 1.25rem;
+  }
+  .hero-cta {
+    display: inline-block; background: #2e6da4; color: #fff;
+    font-size: 0.85rem; padding: 0.55rem 1.25rem; border: none;
+    cursor: pointer; border-radius: 3.75px;
+  }
 
-  /* INTRO BAND */
-  .intro-band { background: #fff; padding: 2rem 2rem 1.5rem; text-align: center; border-bottom: 1px solid #e8e8e8; }
-  .intro-band h2 { font-size: 1.25rem; font-weight: 300; color: #222; margin-bottom: 0.75rem; line-height: 1.35; }
-  .intro-band p { font-size: 0.85rem; color: #555; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+  /* ─────────────────────────────────────────
+     DIGITAL MEETS PERSONAL
+  ───────────────────────────────────────── */
+  .dmp-section {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .dmp-title {
+    text-align: center; font-size: 1.3rem; font-weight: 300;
+    color: #222; margin-bottom: 1.75rem;
+  }
+  .dmp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .dmp-left { display: flex; flex-direction: column; gap: 1rem; }
+  .dmp-right { border-left: 1px solid #e0e0e0; padding-left: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .dmp-item { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.85rem; color: #444; line-height: 1.55; }
+  .dmp-check { color: #4a8c3f; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+  .dmp-right a { color: #2e6da4; text-decoration: none; }
+  .dmp-right a:hover { text-decoration: underline; }
+  .dmp-phone-label { font-weight: 700; font-size: 0.85rem; color: #333; margin-top: 0.5rem; }
+  .dmp-phone { font-size: 1.4rem; font-weight: 300; color: #333; }
+  .dmp-coaching-row { display: flex; align-items: flex-start; gap: 0.5rem; }
+  .dmp-coaching-content { flex: 1; font-size: 0.85rem; color: #444; line-height: 1.6; }
+  .dmp-coaching-icon { flex-shrink: 0; width: 90px; height: auto; margin-left: 1rem; }
 
-  /* DIGITAL MEETS PERSONAL */
-  .digital-section { background: #f5f5f5; padding: 2rem; }
-  .digital-section h2 { font-size: 1.1rem; font-weight: 400; color: #222; text-align: center; margin-bottom: 1.5rem; line-height: 1.4; }
-  .digital-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
-  .digital-col { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 1.25rem 1rem; text-align: center; }
-  .digital-col-icon { font-size: 1.75rem; margin-bottom: 0.6rem; line-height: 1; }
-  .digital-col h3 { font-size: 0.88rem; font-weight: 700; color: #222; margin-bottom: 0.4rem; line-height: 1.3; }
-  .digital-col p { font-size: 0.78rem; color: #555; line-height: 1.5; }
+  /* ─────────────────────────────────────────
+     ROBO + COACHING BAND
+  ───────────────────────────────────────── */
+  .robo-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 280px;
+    background: #5a3e2b;
+  }
+  .robo-image {
+    background: #4a3020;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .robo-image img {
+    width: 75%; max-width: 280px; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+  }
+  /* Tablet mockup placeholder */
+  .robo-tablet-placeholder {
+    width: 65%; max-width: 260px;
+    aspect-ratio: 4/3;
+    background: #1a2820;
+    border-radius: 8px;
+    border: 3px solid #4a5a50;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .robo-tablet-screen {
+    width: 90%; height: 85%;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0.5rem;
+    display: flex; flex-direction: column; gap: 0.3rem;
+  }
+  .robo-screen-bar { height: 8px; background: #4a8c3f; border-radius: 2px; }
+  .robo-screen-line { height: 6px; background: #e8e8e8; border-radius: 2px; }
+  .robo-screen-line.short { width: 60%; }
+  .robo-screen-chart {
+    margin-top: auto;
+    height: 40px;
+    display: flex; align-items: flex-end; gap: 3px;
+  }
+  .robo-screen-chart span {
+    flex: 1; background: #2e6da4; border-radius: 1px 1px 0 0; opacity: 0.7;
+  }
+  .robo-content {
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .robo-content h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 300;
+    color: #fff; line-height: 1.3; margin-bottom: 1rem;
+  }
+  .robo-content p { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
 
-  /* ROBO BAND */
-  .robo-band { background: #1a3a5c; padding: 2rem; display: flex; align-items: center; gap: 2rem; }
-  .robo-text { flex: 1; }
-  .robo-text h2 { font-size: 1.1rem; font-weight: 300; color: #fff; margin-bottom: 0.65rem; line-height: 1.35; }
-  .robo-text p { font-size: 0.82rem; color: rgba(255,255,255,0.85); line-height: 1.55; margin-bottom: 0.75rem; }
-  .robo-text ul { list-style: none; padding: 0; }
-  .robo-text ul li { font-size: 0.8rem; color: rgba(255,255,255,0.88); line-height: 1.5; padding-left: 1rem; position: relative; margin-bottom: 0.3rem; }
-  .robo-text ul li::before { content: "✓"; position: absolute; left: 0; color: #7ec87e; font-weight: 700; }
-  .robo-img-wrap { flex-shrink: 0; width: 180px; display: flex; align-items: center; justify-content: center; }
-  .robo-img-wrap img { width: 100%; height: auto; display: block; }
+  /* ─────────────────────────────────────────
+     FEE CALCULATOR
+  ───────────────────────────────────────── */
+  .fee-outer {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .fee-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 760px;
+  }
+  .fee-text h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 300;
+    color: #222; margin-bottom: 0.6rem; line-height: 1.3;
+  }
+  .fee-text p {
+    font-size: 0.85rem; color: #555; line-height: 1.6;
+  }
+  .fee-calc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .fee-input-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .fee-label { font-size: 0.75rem; color: #888; letter-spacing: 0.03em; }
+  .fee-input-row {
+    display: flex; align-items: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.4rem;
+  }
+  .fee-dollar { font-size: 1.4rem; color: #333; margin-right: 0.3rem; }
+  .fee-input {
+    font-size: 1.4rem; color: #333; font-weight: 300;
+    border: none; outline: none; background: transparent;
+    width: 100%; font-family: Arial, sans-serif;
+  }
+  .fee-min { font-size: 0.72rem; color: #888; margin-top: 0.3rem; }
+  .fee-result-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .fee-result-label { font-size: 0.75rem; color: #888; }
+  .fee-result-amount {
+    font-size: 2.2rem; font-weight: 300; color: #333; line-height: 1;
+  }
+  .fee-result-amount span { font-size: 1rem; vertical-align: super; font-size: 1rem; }
+  .fee-result-note { font-size: 0.72rem; color: #888; line-height: 1.4; max-width: 220px; }
 
-  /* FEE CALCULATOR */
-  .fee-section { background: #fff; padding: 2rem; }
-  .fee-section h2 { font-size: 1.1rem; font-weight: 400; color: #222; text-align: center; margin-bottom: 0.5rem; }
-  .fee-section .fee-sub { font-size: 0.82rem; color: #555; text-align: center; margin-bottom: 1.5rem; }
-  .fee-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-  .fee-table thead tr { background: #4a8c3f; color: #fff; }
-  .fee-table thead th { padding: 0.6rem 1rem; text-align: left; font-weight: 600; font-size: 0.8rem; }
-  .fee-table tbody tr:nth-child(even) { background: #f9f9f9; }
-  .fee-table tbody td { padding: 0.55rem 1rem; color: #333; border-bottom: 1px solid #e8e8e8; }
-  .fee-note { font-size: 0.72rem; color: #777; margin-top: 1rem; line-height: 1.5; }
-  .fee-cta-wrap { text-align: center; margin-top: 1.5rem; }
-  .btn-primary { display: inline-block; background: #2e6da4; color: #fff; font-size: 0.82rem; padding: 0.6rem 1.5rem; border: none; cursor: pointer; border-radius: 3.75px; text-decoration: none; }
-  .btn-secondary { display: inline-block; background: transparent; color: #2e6da4; font-size: 0.82rem; padding: 0.6rem 1.5rem; border: 1px solid #2e6da4; cursor: pointer; border-radius: 3.75px; text-decoration: none; margin-left: 0.75rem; }
+  /* ─────────────────────────────────────────
+     PROCESS STEPS — What to expect
+  ───────────────────────────────────────── */
+  .process-section {
+    padding: 3rem 2rem;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .process-title {
+    text-align: center; font-size: 1.4rem; font-weight: 300;
+    color: #222; margin-bottom: 2rem;
+  }
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
+    align-items: start;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .process-step {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+  .process-step-label {
+    font-size: 0.88rem; font-weight: 700; color: #222;
+    text-align: center; line-height: 1.35;
+    margin-bottom: 0.75rem;
+    min-height: 2.4em;
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .process-icon-circle {
+    width: 100px; height: 100px;
+    border: none; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #efefef; flex-shrink: 0;
+  }
+  .process-icon-circle img { width: 56px; height: 56px; }
+  .process-connector {
+    height: 2px; background: #ccc;
+    margin-top: calc(38px + 0.75rem + 50px);
+    align-self: flex-start;
+  }
+  .process-desc {
+    font-size: 0.82rem; color: #555; text-align: center;
+    line-height: 1.55; margin-top: 1rem;
+  }
 
-  /* WHAT TO EXPECT */
-  .steps-section { background: #f5f5f5; padding: 2rem; }
-  .steps-section h2 { font-size: 1.1rem; font-weight: 400; color: #222; text-align: center; margin-bottom: 1.5rem; }
-  .steps-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; }
-  .step-col { text-align: center; }
-  .step-circle { width: 80px; height: 80px; border-radius: 50%; background: #fff; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.65rem; }
-  .step-circle img { width: 40px; height: 40px; }
-  .step-num { font-size: 0.68rem; font-weight: 700; color: #4a8c3f; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-  .step-col h4 { font-size: 0.82rem; font-weight: 700; color: #222; line-height: 1.3; margin-bottom: 0.3rem; }
-  .step-col p { font-size: 0.73rem; color: #555; line-height: 1.45; }
-  .step-divider { display: flex; align-items: center; justify-content: center; padding-top: 40px; color: #bbb; font-size: 1rem; }
+  /* ─────────────────────────────────────────
+     GET STARTED CTA
+  ───────────────────────────────────────── */
+  .cta-section {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .cta-section h2 {
+    font-size: 1.1rem; font-weight: 400; color: #222; margin-bottom: 1.25rem;
+  }
+  .cta-row { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+  .cta-btn {
+    background: #2e6da4; color: #fff; font-size: 0.85rem;
+    padding: 0.55rem 1.25rem; border: none; cursor: pointer; border-radius: 3.75px;
+  }
+  .cta-row-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+  .cta-row-item .q-icon {
+    width: 32px; height: 32px; border: 2px solid #ccc; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; font-weight: 700; color: #888; flex-shrink: 0;
+  }
+  .cta-row-item .q-text { display: flex; flex-direction: column; }
+  .cta-row-item .q-text strong { font-size: 0.82rem; color: #333; }
+  .cta-row-item .q-text span { font-size: 0.78rem; color: #555; }
+  .cta-row-item .q-text a { color: #2e6da4; text-decoration: none; font-size: 0.82rem; }
+  .cta-tagline { font-size: 0.72rem; color: #888; margin-top: 0.5rem; }
 
-  /* READY CTA */
-  .ready-section { background: #1a3a5c; padding: 2.5rem 2rem; text-align: center; }
-  .ready-section h2 { font-size: 1.3rem; font-weight: 300; color: #fff; margin-bottom: 0.65rem; line-height: 1.35; }
-  .ready-section p { font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.55; max-width: 480px; margin-left: auto; margin-right: auto; }
-  .ready-section .btn-primary { font-size: 0.9rem; padding: 0.7rem 2rem; }
-  .ready-section .btn-secondary { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.5); }
-
-  /* LEGAL */
-  .legal-footer { background: #fff; border-top: 1px solid #e0e0e0; padding: 1rem 1.5rem; }
-  .legal-footer p { font-size: 0.63rem; color: #777; line-height: 1.5; margin-bottom: 0.3rem; }
-  .fid-footer { background: #fff; border-top: 1px solid #e8e8e8; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  /* ─────────────────────────────────────────
+     LEGAL FOOTER
+  ───────────────────────────────────────── */
+  .legal-footer {
+    background: #fff; border-top: 1px solid #e0e0e0; padding: 1.25rem 2rem;
+  }
+  .legal-footer p {
+    font-size: 0.63rem; color: #777; line-height: 1.55; margin-bottom: 0.4rem;
+  }
+  .fid-footer {
+    background: #fff; border-top: 1px solid #e8e8e8;
+    padding: 0.75rem 2rem; display: flex;
+    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+  }
   .fid-footer-links { font-size: 0.63rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
   .fid-footer-links a { color: #2e6da4; text-decoration: none; }
 
-  /* RESPONSIVE */
-  @media (max-width: 600px) {
-    .page { margin: 0; box-shadow: none; }
-    .fid-nav-title { display: none; }
-    .hero { min-height: 280px; }
-    .hero-img { object-position: center top; }
-    .hero-content { max-width: 100%; padding: 1.5rem 1.25rem 2rem; }
-    .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.15) 100%); }
-    .digital-cols { grid-template-columns: 1fr; }
-    .robo-band { flex-direction: column; }
-    .robo-img-wrap { width: 140px; }
-    .steps-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .fee-table { font-size: 0.75rem; }
-    .btn-secondary { margin-left: 0; margin-top: 0.5rem; }
-    .fid-footer { flex-direction: column; align-items: flex-start; }
-  }
-
-  @media (max-width: 380px) {
-    .steps-grid { grid-template-columns: 1fr; }
+  /* ─────────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .hero-content { max-width: 100%; padding: 1.5rem 1.25rem 7rem; }
+    .dmp-grid { grid-template-columns: 1fr; }
+    .dmp-right { border-left: none; border-top: 1px solid #e0e0e0; padding-left: 0; padding-top: 1.25rem; }
+    .dmp-coaching-icon { width: 70px; }
+    .robo-band { grid-template-columns: 1fr; }
+    .robo-image { min-height: 200px; }
+    .fee-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .fee-calc { grid-template-columns: 1fr; }
+    /* What to expect: single column, hide connectors */
+    .process-steps { grid-template-columns: 1fr; gap: 2rem; }
+    .process-connector { display: none; }
+    .process-step-label { min-height: unset; }
+    .cta-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .dmp-section, .fee-outer, .cta-section { padding-left: 1.25rem; padding-right: 1.25rem; }
   }
 </style>
 </head>
 <body>
 
-<div class="page">
-
-  <!-- NAV -->
-  <div class="fid-nav">
-    <div class="fid-nav-left">
-      <div class="fid-logo">FinanceCo</div>
-      <span class="fid-nav-title">Personalized Planning &amp; Advice</span>
-    </div>
-    <span class="fid-nav-action">Get Your Free Proposal</span>
+<!-- NAV -->
+<div class="fid-nav">
+  <div class="fid-nav-left">
+    <div class="fid-logo">AdvisorCo</div>
+    <span class="fid-nav-title">Personalized Planning &amp; Advice</span>
   </div>
+</div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <img class="hero-img" src="HouseOnLakeHero.png" alt="">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>A personalized financial plan — built and managed for you.</h1>
-      <p>Get a dedicated team of advisors and an automated investment portfolio, all for one straightforward fee.</p>
-      <a href="#" class="hero-cta">Get your free proposal</a>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="HouseOnLakeHero.png" alt="">
+  <div class="hero-content">
+    <h1>Those big dreams of yours?<br>Let's go reach them, together.</h1>
+    <p>You want affordable investment management for your goals.<br>Our hybrid robo advisor is here to help.</p>
+    <button class="hero-cta">Tell us about yourself</button>
   </div>
+</div>
 
-  <!-- INTRO -->
-  <div class="intro-band">
-    <h2>Digital meets personal — the best of both worlds.</h2>
-    <p>FinanceCo Personalized Planning &amp; Advice pairs sophisticated digital investing tools with a dedicated team of advisors who know you by name. You get a fully personalized financial plan, an automatically managed portfolio, and ongoing guidance — all for one simple annual fee.</p>
-  </div>
-
-  <!-- DIGITAL MEETS PERSONAL -->
-  <div class="digital-section">
-    <h2>Everything you need in one place</h2>
-    <div class="digital-cols">
-      <div class="digital-col">
-        <div class="digital-col-icon">📋</div>
-        <h3>Your personalized plan</h3>
-        <p>We start with a comprehensive financial plan built around your goals, timeline, and complete financial picture.</p>
+<!-- DIGITAL MEETS PERSONAL -->
+<div class="dmp-section">
+  <p class="dmp-title">Digital meets personal</p>
+  <div class="dmp-grid">
+    <div class="dmp-left">
+      <div class="dmp-item">
+        <span class="dmp-check">✓</span>
+        <span>Want something personalized? Tell us about you and your goals, and we'll digitally recommend a tailored investment strategy.</span>
       </div>
-      <div class="digital-col">
-        <div class="digital-col-icon">📈</div>
-        <h3>Managed investing</h3>
-        <p>Your portfolio is automatically invested and rebalanced using sophisticated strategies tailored to your plan.</p>
+      <div class="dmp-item">
+        <span class="dmp-check">✓</span>
+        <span>Looking for a partnership? No problem. We'll choose your investments and use technology to make sure you stay on track.</span>
       </div>
-      <div class="digital-col">
-        <div class="digital-col-icon">🤝</div>
-        <h3>A dedicated team</h3>
-        <p>Real advisors available by phone or video to answer questions, review your plan, and keep you on track.</p>
+      <div class="dmp-item">
+        <span class="dmp-check">✓</span>
+        <span>Need something extra? Online planning tools and resources to help you determine your next best action.</span>
       </div>
     </div>
-  </div>
-
-  <!-- ROBO BAND -->
-  <div class="robo-band">
-    <div class="robo-text">
-      <h2>Automated investing — working for you around the clock.</h2>
-      <p>Our platform continuously monitors and manages your portfolio so you never have to worry about rebalancing, tax efficiency, or missing an opportunity.</p>
-      <ul>
-        <li>Automatic rebalancing to stay aligned with your plan</li>
-        <li>Tax-smart investing strategies built in</li>
-        <li>Diversified portfolios across asset classes</li>
-        <li>Real-time performance tracking on any device</li>
-      </ul>
-    </div>
-    <div class="robo-img-wrap">
-      <img src="ipadArea.svg" alt="Platform dashboard">
-    </div>
-  </div>
-
-  <!-- FEE CALCULATOR -->
-  <div class="fee-section">
-    <h2>One simple, transparent fee</h2>
-    <p class="fee-sub">Our all-in advisory fee is based on your managed assets — no hidden charges.</p>
-    <table class="fee-table">
-      <thead>
-        <tr>
-          <th>Assets Under Management</th>
-          <th>Annual Advisory Fee</th>
-          <th>Estimated Annual Cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>$50,000 – $249,999</td>
-          <td>0.50%</td>
-          <td>$250 – $1,250</td>
-        </tr>
-        <tr>
-          <td>$250,000 – $499,999</td>
-          <td>0.50%</td>
-          <td>$1,250 – $2,500</td>
-        </tr>
-        <tr>
-          <td>$500,000 – $999,999</td>
-          <td>0.50%</td>
-          <td>$2,500 – $5,000</td>
-        </tr>
-        <tr>
-          <td>$1,000,000+</td>
-          <td>0.50%</td>
-          <td>$5,000+</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="fee-note">The advisory fee covers financial planning, investment management, and ongoing advisor access. Underlying fund expense ratios may apply separately. Minimum investment: $50,000.</p>
-    <div class="fee-cta-wrap">
-      <a href="#" class="btn-primary">See your personalized proposal</a>
-      <a href="#" class="btn-secondary">Talk to an advisor</a>
-    </div>
-  </div>
-
-  <!-- WHAT TO EXPECT -->
-  <div class="steps-section">
-    <h2>What to expect — getting started is simple</h2>
-    <div class="steps-grid">
-      <div class="step-col">
-        <div class="step-circle">
-          <img src="icon_create_profile.svg" alt="">
+    <div class="dmp-right">
+      <div class="dmp-coaching-row">
+        <span class="dmp-check">✓</span>
+        <div class="dmp-coaching-content">
+          Need coaching? Our team of advisors will work with you to develop strategies to help you tackle your financial life with confidence. <a href="prospect.html">More about coaching</a>
         </div>
-        <p class="step-num">Step 1</p>
-        <h4>Create your profile</h4>
-        <p>Tell us about your goals, assets, and timeline. It only takes a few minutes.</p>
+        <img class="dmp-coaching-icon" src="MapIcon.svg" alt="">
       </div>
-      <div class="step-col">
-        <div class="step-circle">
-          <img src="icon_proposal.svg" alt="">
+      <p class="dmp-phone-label">Questions? Ask for "Planning"</p>
+      <p class="dmp-phone">800-343-3548</p>
+    </div>
+  </div>
+</div>
+
+<!-- ROBO + COACHING BAND -->
+<div class="robo-band">
+  <div class="robo-image">
+    <div class="robo-tablet-placeholder">
+      <div class="robo-tablet-screen">
+        <div class="robo-screen-bar"></div>
+        <div class="robo-screen-line"></div>
+        <div class="robo-screen-line short"></div>
+        <div class="robo-screen-line"></div>
+        <div class="robo-screen-line short"></div>
+        <div class="robo-screen-chart">
+          <span style="height:30%"></span>
+          <span style="height:50%"></span>
+          <span style="height:40%"></span>
+          <span style="height:70%"></span>
+          <span style="height:55%"></span>
+          <span style="height:80%"></span>
+          <span style="height:65%"></span>
+          <span style="height:90%"></span>
         </div>
-        <p class="step-num">Step 2</p>
-        <h4>Get your proposal</h4>
-        <p>Receive a personalized financial plan and investment strategy — free, with no commitment.</p>
-      </div>
-      <div class="step-col">
-        <div class="step-circle">
-          <img src="icon_accept_open.svg" alt="">
-        </div>
-        <p class="step-num">Step 3</p>
-        <h4>Accept &amp; open</h4>
-        <p>Review your plan with an advisor, accept the proposal, and open your managed account.</p>
-      </div>
-      <div class="step-col">
-        <div class="step-circle">
-          <img src="icon_stay_on_track.svg" alt="">
-        </div>
-        <p class="step-num">Step 4</p>
-        <h4>Stay on track</h4>
-        <p>Your portfolio is managed automatically while your advisor team is available whenever you need them.</p>
       </div>
     </div>
   </div>
-
-  <!-- READY CTA -->
-  <div class="ready-section">
-    <h2>Ready to get started?</h2>
-    <p>Join thousands of clients who trust FinanceCo Personalized Planning &amp; Advice to manage their financial future. Get your free, no-obligation proposal today.</p>
-    <a href="#" class="btn-primary">Get your free proposal</a>
-    <a href="#" class="btn-secondary">Talk to an advisor</a>
+  <div class="robo-content">
+    <h2>Robo investing + the benefit of coaching</h2>
+    <p>It's called a "hybrid" robo advisor because we pair robo investing, which is an automated way to invest, with a human element through personal coaching. Based on your needs, we'll generate an investment strategy, sample pictured. We'll invest your money and keep an eye on your account to make sure your portfolio's breakdown stays in line. At no additional cost, you'll get access to 30-minute coaching calls with a licensed advisor who'll collaborate with you on a variety of financial topics to help you reach your goals.</p>
   </div>
+</div>
 
-  <!-- LEGAL -->
-  <div class="legal-footer">
-    <p>FinanceCo Personalized Planning &amp; Advice provides non-discretionary financial planning and discretionary investment management services for a fee. Advisory services offered by registered investment advisers. Brokerage services provided by registered broker-dealers, members NYSE and SIPC. Investing involves risk, including risk of loss. Past performance is no guarantee of future results.</p>
-  </div>
-  <div class="fid-footer">
-    <svg width="80" height="24" viewBox="0 0 80 24"><text x="0" y="17" font-size="13" font-style="italic" font-weight="700" fill="#555" font-family="Georgia,serif">FinanceCo</text></svg>
-    <div class="fid-footer-links">
-      <a href="#">© 2019. All rights reserved.</a>
-      <a href="#">Terms of Use</a><a href="#">Privacy</a><a href="#">Security</a><a href="#">Sitemap</a>
+<!-- FEE CALCULATOR -->
+<div class="fee-outer">
+  <div class="fee-inner">
+    <div class="fee-text">
+      <h2>A great value with no hidden fees</h2>
+      <p>We believe that putting your money on a mission shouldn't have to cost a lot. That's why you pay no more than a 0.50% advisory fee.</p>
+    </div>
+    <div class="fee-calc">
+      <div class="fee-input-group">
+        <span class="fee-label">Your account balance</span>
+        <div class="fee-input-row">
+          <span class="fee-dollar">$</span>
+          <input class="fee-input" type="number" id="balanceInput" value="25000" min="25000" step="1000">
+        </div>
+        <span class="fee-min">$25,000 minimum</span>
+      </div>
+      <div class="fee-result-group">
+        <span class="fee-result-label">Estimated total cost</span>
+        <div class="fee-result-amount" id="feeResult">$10.42<span>/mo</span></div>
+        <p class="fee-result-note">Actual costs will vary based on account balance.</p>
+      </div>
     </div>
   </div>
+</div>
 
-</div><!-- /page -->
+<!-- PROCESS STEPS -->
+<div class="process-section">
+  <p class="process-title">What to expect</p>
+  <div class="process-steps">
+
+    <div class="process-step">
+      <span class="process-step-label">Create a profile</span>
+      <div class="process-icon-circle">
+        <img src="icon_create_profile.svg" alt="Create a profile">
+      </div>
+      <p class="process-desc">Tell us about yourself and what you're saving for. It'll take about 5 minutes.</p>
+    </div>
+
+    <div class="process-connector"></div>
+
+    <div class="process-step">
+      <span class="process-step-label">Get a free proposal</span>
+      <div class="process-icon-circle">
+        <img src="icon_proposal.svg" alt="Get a free proposal">
+      </div>
+      <p class="process-desc">Review your no-commitment investment strategy.</p>
+    </div>
+
+    <div class="process-connector"></div>
+
+    <div class="process-step">
+      <span class="process-step-label">Accept and open</span>
+      <div class="process-icon-circle">
+        <img src="icon_accept_open.svg" alt="Accept and open">
+      </div>
+      <p class="process-desc">Accept our proposal, then open and fund your account. Congrats, you're officially enrolled!</p>
+    </div>
+
+    <div class="process-connector"></div>
+
+    <div class="process-step">
+      <span class="process-step-label">Stay on track</span>
+      <div class="process-icon-circle">
+        <img src="icon_stay_on_track.svg" alt="Stay on track">
+      </div>
+      <p class="process-desc">We'll make the necessary adjustments, when needed, and have an ongoing conversation with you.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- GET STARTED CTA -->
+<div style="padding: 2.5rem 2rem; background: #fff; border-bottom: 1px solid #e0e0e0;">
+  <h2 style="font-size:1.1rem; font-weight:400; color:#222; margin-bottom:1.25rem;">Ready to get started?</h2>
+  <div style="display:flex; align-items:center; gap:3rem; flex-wrap:wrap;">
+
+    <!-- Button + tagline -->
+    <div style="display:flex; flex-direction:column; gap:0.4rem;">
+      <button class="cta-btn">Tell us about yourself</button>
+      <span style="font-size:0.72rem; color:#888;">It'll take about 5 minutes.</span>
+    </div>
+
+    <!-- Phone -->
+    <div style="display:flex; align-items:center; gap:0.6rem;">
+      <svg width="22" height="32" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="20" height="30" rx="4" stroke="#888" stroke-width="1.5" fill="none"/>
+        <circle cx="11" cy="27" r="2" fill="#888" opacity="0.5"/>
+        <line x1="7" y1="5" x2="15" y2="5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div style="display:flex; flex-direction:column; gap:0.1rem;">
+        <span style="font-size:0.78rem; color:#555;">Questions?</span>
+        <span style="font-size:0.95rem; font-weight:700; color:#333;">800-343-3548</span>
+        <span style="font-size:0.78rem; color:#555;">Ask for "Planning"</span>
+      </div>
+    </div>
+
+    <!-- FAQs -->
+    <div style="display:flex; align-items:center; gap:0.5rem;">
+      <div style="width:28px; height:28px; border:1.5px solid #aaa; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:700; color:#888;">?</div>
+      <a href="#" style="color:#2e6da4; text-decoration:none; font-size:0.85rem;">FAQs</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- LEGAL -->
+<div class="legal-footer">
+  <p>Before investing, consider the funds' investment objectives, risks, charges, and expenses. Contact our firm for a prospectus or, if available, a summary prospectus containing this information. Read it carefully.</p>
+  <p>The results of any financial planning tools are hypothetical, do not represent actual investment results, and are not guarantees of future results.</p>
+  <p>Advisory services offered by registered investment advisers. Brokerage services provided by registered broker-dealers, members NYSE and SIPC.</p>
+  <p style="margin-top:0.5rem;">© 2019. All rights reserved. &nbsp;|&nbsp; This is for persons in the U.S. only.</p>
+</div>
+<div class="fid-footer">
+  <span style="font-size:0.63rem; color:#888;">© 2019. All rights reserved.</span>
+  <div class="fid-footer-links">
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy</a>
+    <a href="#">Security</a>
+    <a href="#">Site Map</a>
+    <a href="#">Contact Us</a>
+    <span style="color:#888;">This is for persons in the U.S. only</span>
+  </div>
+</div>
+
+<script>
+  // Fee calculator — 0.50% annual advisory fee / 12 months
+  const input = document.getElementById('balanceInput');
+  const result = document.getElementById('feeResult');
+
+  function calcFee(balance) {
+    const monthly = (balance * 0.005) / 12;
+    return monthly.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  input.addEventListener('input', function() {
+    const val = parseFloat(this.value) || 0;
+    const min = 25000;
+    const balance = Math.max(val, min);
+    result.innerHTML = '$' + calcFee(balance) + '<span>/mo</span>';
+  });
+</script>
 
 </body>
 </html>
